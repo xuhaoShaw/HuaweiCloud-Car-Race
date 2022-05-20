@@ -1,0 +1,29 @@
+weights: .\weights\yolov5s_datav3_1024.ckpt
+data: ../../data/dataset.yaml   # dataset config
+hyp: train_utils/hyp.yaml  # hyperparameters
+cfg: ''
+
+device: 'GPU'
+epochs: 200
+batch_size: 2
+resume: False
+img_size:               # [train, val] image sizes
+  - 1024
+  - 1024
+workers: 4              # maximum number of dataloader workers
+rect: false             # rectangular training
+nosave: false           # only save final checkpoint
+noval: false            # only validate final epoch
+noautoanchor: false     # disable autoanchor check
+cache_images: false     # cache images for faster training
+image_weights: false    # use weighted image selection for training
+multi_scale: false      # vary img-size +/- 50%
+adam: false             # use torch.optim.Adam() optimizer
+sync_bn: false
+exist_ok: true
+linear_lr: false         # linear LR
+label_smoothing: 0.0     # Label smoothing epsilon
+save_period: -1          # save ckpt after every "save_periosd" epoch
+artifact_alias: latest   # version of dataset artifact to be used
+
+save_dir: runs\exp    #

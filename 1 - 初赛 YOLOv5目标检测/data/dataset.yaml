@@ -1,0 +1,14 @@
+# Customer Dataset Configuration
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+split_percent: 0.75  #
+path: data/datav3  # dataset path relative to train.py
+train: train.txt  # train images relative to dataset path
+val: test.txt  # train images
+test: #test-dev2017.txt  #
+
+# Classes
+nc: 6  # number of classes
+names: ['red_stop', 'green_go', 'yellow_back', 'speed_limited', 'speed_unlimited', 'pedestrian_crossing']  # class names
+
+

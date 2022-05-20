@@ -1,0 +1,71 @@
+{
+    "model_algorithm": "object_detection",
+    "model_type": "MindSpore",
+    "runtime": "mindspore_1.2.0-py_37-cuda_10.1-ubuntu_1804-x86_64-latest",
+    "apis": [{
+        "procotol": "https",
+            "url": "/",
+            "method": "post",
+            "request": {
+                "Content-type": "multipart/form-data",
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "images": {
+                            "type": "file"
+                        }
+                    }
+                }
+            },
+            "response": {
+                "Content-type": "multipart/from-data",
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "detection_classes": {
+                            "type": "array",
+                            "items": [{
+                                "type": "string"
+                                }]
+                        },
+                        "detection_boxes": {
+                            "type": "array",
+                            "items": [{
+                                "type": "array",
+                                "minItems": 4,
+                                "maxItems": 4,
+                                "items":[{
+                                    "type": "number"
+                                }]
+                                }]
+                        },
+                        "detection_scores": {
+                            "type": "array",
+                            "items": [{
+                                "type": "number"
+                                }]
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "dependencies": [
+        {
+            "installer": "pip",
+            "packages": [
+                {
+                    "restraint": "EXACT",
+                    "package_version": "4.5.3.56",
+                    "package_name": "opencv-python"
+                },
+                {
+                    "restraint": "ATLEAST",
+                    "package_version": "1.18.5",
+                    "package_name": "numpy"
+                }
+            ]
+
+        }
+    ]
+}

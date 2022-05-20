@@ -1,0 +1,32 @@
+<Category>(Theme)
+
+# Category字段包含:
+#     feat：新功能（feature）
+#     fix：修复bug
+#     doc：文档（documentation）
+#     style： 格式化 ESLint调整等（不影响代码运行的变动）
+#     refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+#     perf: 代码的修改提高的性能
+#     test：增加测试
+#     chore: 构建过程或构建工具的改变(并没有生产环境代码的改变)
+# Theme字段包含本次commit的主题
+
+
+<Symptom>
+# Bug的表现
+
+
+<Root Cause>
+# Bug出现的原因
+
+
+<Solution>
+# 解决措施
+
+
+<Influence Range>
+# 影响范围
+
+
+<Note>
+# 备注与补充
